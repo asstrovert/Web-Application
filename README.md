@@ -1,17 +1,36 @@
-Web Application Deployment on AWS EKS
-This project demonstrates the deployment of a simple static web application on an AWS EKS (Elastic Kubernetes Service) cluster. The setup includes containerizing the web application, deploying it on Kubernetes and setting up monitoring using Prometheus.
+# Cloud-Based Kubernetes Deployment with Terraform  
 
-Prerequisites
-AWS Account: Ensure you have an AWS account and appropriate permissions to create resources.
-AWS CLI: Installed and configured with your credentials.
-Terraform: Installed on your local system.
-Docker: For creating and managing Docker images.
-kubectl: Kubernetes command-line tool configured to access your EKS cluster.
+This project demonstrates how to deploy a web application on a cloud-based Kubernetes solution (AWS EKS) using Infrastructure as Code (IaC) with Terraform. The deployment ensures proper logging and monitoring using Prometheus.
 
-Project Structure
-index.html: Simple static HTML page serving as the web application.
-Dockerfile: Used to create a Docker image of the web application.
-main.tf: Terraform file to set up the EKS cluster on AWS.
-deployment.yml: Kubernetes deployment configuration.
-service.yml: Kubernetes service configuration for load balancing.
-prometheus-deployment.yml: Prometheus deployment for monitoring.
+---
+
+## **Project Overview**  
+
+The goal of this project is to deploy a simple static web application using a Dockerized image on Kubernetes, provisioned using Terraform. The solution includes:  
+- Automated infrastructure setup on AWS (VPC, Subnets, EKS Cluster, and Worker Nodes).  
+- Kubernetes manifests for deploying the web application.  
+- Prometheus integration for monitoring and logging.  
+
+---
+
+## **Features**  
+
+- **Infrastructure as Code (IaC)**: Provision cloud resources using Terraform.  
+- **Containerized Deployment**: Use Docker to containerize the web application.  
+- **Kubernetes Orchestration**: Deploy and manage the application using Kubernetes.  
+- **Monitoring and Logging**: Integrate Prometheus for monitoring and alerts.  
+
+---
+
+## **File Structure**  
+
+```plaintext
+.
+├── Dockerfile            # Dockerfile to containerize the sample web application
+├── kubernetes/           # Kubernetes deployment files
+│   ├── deployment.yaml   # Kubernetes Deployment manifest
+│   ├── service.yaml      # Kubernetes Service manifest
+│   ├── prometheus.yaml   # Prometheus configuration
+├── terraform/            # Terraform files for cloud infrastructure
+│   ├── main.tf           # Main Terraform configuration
+├── README.md             # Project documentation
