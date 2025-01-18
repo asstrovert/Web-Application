@@ -14,6 +14,6 @@ spec:
     spec:
       containers:
       - name: web-app
-        image: your-docker-image # Replace with your Docker image
+        image: web-app:latest
         ports:
         - containerPort: 80
